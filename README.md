@@ -28,7 +28,7 @@ Now you can define *FROM and *TO values and initialize like this
 </script>
 ```
 
-##jQueryCounter Params
+##jQueryCounter Options
 
 ```
 from: 0,  				// the number the element should start at
