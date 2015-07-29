@@ -26,9 +26,11 @@
                 if (loopCount >= loops) {
                     clearInterval(interval);
                     value = options.finalvalue;
-
+		    
+		    jQuery(_this).html(value).digits();
+		    
                     if (typeof(options.onComplete) == 'function') {
-                        options.onComplete.call(_this, value);
+                        options.onComplete.call(_this, options.finalvalue);
                     }
                 }
             }
@@ -37,13 +39,13 @@
 
     $.fn.countTo.defaults = {
         from: 0,  				// the number the element should start at
-        to: 100,  				// the number the element should end at
-        speed: 1000,  			        // how long it should take to count between the target numbers
-        refreshInterval: 100,  	                // how often the element should be updated
-        decimals: 0,  			        // the number of decimal places to show
-        finalvalue: 50000,                      // final value to display
-        onUpdate: null,  		        // callback method for every time the element is updated,
-        onComplete: null,  		        // callback method for when the element finishes updating
+        to: 107748987,  			// the number the element should end at
+        speed: 1000,  				// how long it should take to count between the target numbers
+        refreshInterval: 100,  			// how often the element should be updated
+        decimals: 0,  				// the number of decimal places to show
+        finalvalue: 100000000,			// the final value to show
+        onUpdate: null,  			// callback method for every time the element is updated,
+        onComplete: null,  			// callback method for when the element finishes updating
     };
     
     $.fn.digits = function(){ 
