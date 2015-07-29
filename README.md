@@ -20,7 +20,8 @@ Now you can define *FROM and *TO values and initialize like this
 	jQuery(document).ready(function($) {
         $('.counter').countTo({
             from: 0,
-            to: 500000,
+            to: 534097, // set this to some non round number to create more exciting (random) increments
+            finalvalue: 500000, // the actual final value you are counting to and want to display
             speed: 5000,
             refreshInterval: 50,
         });
@@ -33,11 +34,12 @@ Now you can define *FROM and *TO values and initialize like this
 ```
 from: 0,  				// the number the element should start at
 to: 100,  				// the number the element should end at
-speed: 1000,  			// how long it should take to count between the target numbers
-refreshInterval: 100,  	// how often the element should be updated
-decimals: 0,  			// the number of decimal places to show
-onUpdate: null,  		// callback method for every time the element is updated,
-onComplete: null,  		// callback method for when the element finishes updating
+speed: 1000,  				// how long it should take to count between the target numbers
+refreshInterval: 100,  			// how often the element should be updated
+decimals: 0,  				// the number of decimal places to show
+finalvalue: 500000, 			// the actual final value you are counting to and want to display
+onUpdate: null,  			// callback method for every time the element is updated,
+onComplete: null,  			// callback method for when the element finishes updating
 ```
 
 
